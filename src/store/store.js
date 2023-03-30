@@ -1,8 +1,8 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import { combineEpics, createEpicMiddleware } from "redux-observable";
-import serviceListReducer from '../action/serviceList';
-import serviceCardReducer from '../action/serviceCard';
-import { fetchServicesEpic, getServiceEpic } from "../components/epics";
+import serviceListReducer from './serviceList';
+import serviceCardReducer from './serviceCard';
+import { fetchServicesEpic, getServiceEpic } from "./epics";
 
 const reducer = combineReducers({
   serviceList: serviceListReducer,

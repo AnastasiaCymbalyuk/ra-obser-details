@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Navigate to='/services'/>}></Route>
         <Route exact path='/services' element={<ServiceList/>} />
-        <Route exact path='./services/:id/details' element={<Service/>} />
+        <Route exact path='/services/:id/details' element={<Service/>}/>
       </Routes>
     </Router>
   );

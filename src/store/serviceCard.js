@@ -2,7 +2,7 @@ import {
     GET_SERVICE_REQUEST,
     GET_SERVICE_SUCCESS,
     GET_SERVICE_FAILURE,
-} from './actionTypes';
+} from '../action/actionTypes';
   
 const initialState = {
   item: null,

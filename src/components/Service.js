@@ -1,19 +1,21 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import React, { useEffect } from 'react'
 import {useSelector, useDispatch} from 'react-redux';
 import { getServiceRequest } from '../action/action';
 
-export default function Service({match}) {
+export default function Service() {
+    const match = useParams();
     const {item, loading, error} = useSelector(state => state.serviceCard);
     const dispatch = useDispatch();
 
+
     useEffect(() => {
-        dispatch(getServiceRequest(match.params.id));
+        dispatch(getServiceRequest(match.id));
     }, []);
 
     const handleReload = () => {
-        dispatch(getServiceRequest(match.params.id));
+        dispatch(getServiceRequest(match.id));
     };
 
     if (loading) {
